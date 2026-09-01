@@ -672,7 +672,7 @@ body{min-width:0}
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="FIT MAD">
-<link rel="icon" type="image/svg+xml" href="icon.svg">
+
 
 <style id="fitmad-v41-home">
 /* V41 premium time-of-day hero */
@@ -3167,9 +3167,9 @@ footer *,.footer *,.bottom-nav *,.nav-bar *,.app-footer *{
 </style>
 
 <body>
-<style id="FITMAD-BLURRED-LOADING-INTRO-FIXED">
+<style id="FITMAD-BLURRED-LOADING-PWA-INTRO">
 html.fm-splash-active{overflow:hidden}
-#fmSplash{position:fixed;inset:0;z-index:2147483647;overflow:hidden;background:#07111d;opacity:1;visibility:visible;transition:opacity .7s cubic-bezier(.2,.7,.2,1)}
+#fmSplash{position:fixed;inset:0;z-index:2147483647;overflow:hidden;background:#07111d;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .72s cubic-bezier(.2,.7,.2,1)}
 #fmSplash.hide{opacity:0;visibility:hidden;pointer-events:none}
 .fm-intro-bg{position:absolute;inset:0;overflow:hidden;background:linear-gradient(135deg,#05080d 0%,#091625 48%,#06101a 100%)}
 .fm-intro-bg:before,.fm-intro-bg:after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(62px)}
@@ -3187,23 +3187,8 @@ html.fm-splash-active{overflow:hidden}
 @media(prefers-reduced-motion:reduce){#fmSplash *{animation:none!important}.fm-intro-dots{opacity:1}.fm-intro-dot{opacity:.8!important}.fm-intro-center{opacity:.55!important}}
 </style>
 <script>document.documentElement.classList.add('fm-splash-active');</script>
-<div id="fmSplash" aria-hidden="true"><div class="fm-intro-bg">
-<span class="fm-intro-center"></span>
-<div class="fm-intro-dots" aria-hidden="true"><span class="fm-intro-dot"></span><span class="fm-intro-dot"></span><span class="fm-intro-dot"></span></div>
-</div></div>
-<script id="FITMAD-BLURRED-LOADING-INTRO-RUNTIME">
-(function(){
-var splash=document.getElementById('fmSplash');if(!splash)return;
-var started=performance.now(),duration=2000;
-function finish(){setTimeout(function(){
-splash.classList.add('hide');
-document.documentElement.classList.remove('fm-splash-active');
-setTimeout(function(){if(splash.parentNode)splash.parentNode.removeChild(splash)},720);
-},Math.max(0,duration-(performance.now()-started)))}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',finish,{once:true});else finish();
-})();
-</script>
-
+<div id="fmSplash" aria-hidden="true"><div class="fm-intro-bg"><span class="fm-intro-center"></span><div class="fm-intro-dots" aria-hidden="true"><span class="fm-intro-dot"></span><span class="fm-intro-dot"></span><span class="fm-intro-dot"></span></div></div></div>
+<script id="FITMAD-BLURRED-LOADING-PWA-INTRO-RUNTIME">(function(){'use strict';var splash=document.getElementById('fmSplash');if(!splash)return;var started=performance.now(),duration=2000;function finish(){setTimeout(function(){splash.classList.add('hide');document.documentElement.classList.remove('fm-splash-active');setTimeout(function(){if(splash.parentNode)splash.parentNode.removeChild(splash)},760)},Math.max(0,duration-(performance.now()-started)))}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',finish,{once:true});else finish()})();</script>
 <div id="shade" class="shade"></div><aside id="drawer" class="drawer"><div class="drawer-shell"><header class="drawer-head"><div class="fm-drawer-hosted-logo"><img src="https://iili.io/CyINEaR.md.png" alt="FIT MAD" decoding="async" referrerpolicy="no-referrer"></div><button id="drawerClose">×</button></header><div class="drawer-label">Explore</div><nav id="drawerNav"></nav><footer class="drawer-footer"><div class="created">Created by Maddy with AI.</div></footer></div></aside><header class="top app-shell"><div class="topin"><button id="menu" class="menu">☰</button><a class="brand fm-hosted-brand" href="#" aria-label="FIT MAD Home"><img src="https://iili.io/CyINEaR.md.png" alt="FIT MAD" decoding="async" referrerpolicy="no-referrer"></a><div class="fm-device-time-group"><div class="device-switch" aria-label="Preview layout"><button data-device="android" title="Android mobile" aria-label="Android mobile">📱</button><button data-device="ipad" title="iPad / tablet" aria-label="iPad tablet">▣</button><button data-device="laptop" title="Laptop / desktop" aria-label="Laptop desktop">▤</button></div><div class="datetime"><b id="clock">12:00:00 PM</b><small id="daydate">Friday · 21 Aug 2026</small></div></div>
 <button id="theme" class="theme"><i>☀</i></button></div></header><main class="app app-shell"><section id="home" class="screen active"></section><section id="planner" class="screen"></section><section id="water" class="screen"></section><section id="fitness" class="screen"></section><section id="nutrition" class="screen"></section><section id="analytics" class="screen"></section><section id="workouts" class="screen"></section><section id="weight" class="screen"></section><section id="achievements" class="screen"></section><section id="journal" class="screen"></section><section id="profile" class="screen"></section><section id="settings" class="screen"></section></main><nav id="bottom" class="bottom"></nav><div id="toast" class="toast"></div><script>
 'use strict';const S='2026-09-01',E='2026-12-31',KEY='madhavaWellnessV33';const ACT=[['wake','Wake up at 5:30 AM','sun'],['morningGym','Morning Gym','gym'],['breakfast','Breakfast','meal'],['fruit','11:00 AM Fruit Break','fruit'],['lunch','Lunch','meal'],['postLunchWalk','Post-Lunch Walk','walk'],['snack','4:00 PM Healthy Snack','fruit'],['eveningGym','Evening Gym','gym'],['dinner','Dinner','meal'],['postDinnerWalk','Post-Dinner Walk','walk'],['sleep','Sleep Before 10:00 PM','moon'],['water','Drink 3 or More Litres of Water','water'],['protein','Daily Protein Goal Achieved','protein']];const P=[['home','home','Home'],['planner','calendar','Planner'],['water','water','Water'],['fitness','gym','Fitness'],['nutrition','meal','Nutrition'],['analytics','chart','Analytics'],['workouts','workout','Workout Log'],['weight','scale','Weight'],['achievements','trophy','Awards'],['journal','journal','Journal'],['profile','user','Profile'],['settings','settings','Settings']];const D=[];for(let d=new Date(S+'T00:00:00');d<=new Date(E+'T00:00:00');d.setDate(d.getDate()+1))D.push(iso(d));let db=load();db.themeMode=db.themeMode||db.theme||'light';db.palette=db.palette||'royal';db.soundChoice=db.soundChoice||'soft';db.hapticLevel=db.hapticLevel||'medium';db.plannerExpiry=db.plannerExpiry||'never';db.sound=db.sound!==false;db.haptic=db.haptic!==false;db.soundChoice=db.soundChoice||'soft';db.hapticLevel=db.hapticLevel||'medium';db.palette=db.palette||'royal';db.themeMode=db.themeMode||db.theme||'light';db.plannerExpiry=db.plannerExpiry||'never';let sel=today();if(sel<S)sel=S;if(sel>E)sel=E;function icon(n){let x={home:'<path d="M3 11 12 3l9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',calendar:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4m8-4v4M3 10h18"/>',water:'<path d="M12 2S5 10 5 15a7 7 0 0 0 14 0c0-5-7-13-7-13z"/>',gym:'<path d="M4 9v6m16-6v6M7 7v10m10-10v10M7 12h10M2 10v4m20-4v4"/>',workout:'<path d="M5 8h14v10H5zM8 5v3m8-3v3M8 12h8m-8 3h5"/>',scale:'<rect x="3" y="4" width="18" height="17" rx="4"/><path d="M8 9a4 4 0 0 1 8 0m-4 0 2-2"/>',meal:'<path d="M4 3v7a3 3 0 0 0 3 3v8M8 3v7M12 3v18M17 3c3 3 3 8 0 11v7"/>',chart:'<path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/>',trophy:'<path d="M8 3h8v5a4 4 0 0 1-8 0zM8 5H4v2a4 4 0 0 0 4 4m8-6h4v2a4 4 0 0 1-4 4m-4 1v5m-4 4h8"/>',journal:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',settings:'<circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1-2-4-2 1a8 8 0 0 0-2-1l-.3-2h-5L9 6a8 8 0 0 0-2 1L5 6 3 10l2 1a7 7 0 0 0 0 2l-2 1 2 4 2-1a8 8 0 0 0 2 1l.5 2h5l.5-2a8 8 0 0 0 2-1l2 1 2-4-2-1z"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2"/>',moon:'<path d="M20 15a8 8 0 0 1-11-11 9 9 0 1 0 11 11z"/>',walk:'<circle cx="12" cy="4" r="2"/><path d="m10 8 4 2 2 4m-6-6-2 5 4 2-2 6m2-6 5 6"/>',fruit:'<path d="M12 7c-5-4-9 1-7 7 2 6 6 8 7 5 1 3 5 1 7-5 2-6-2-11-7-7zM12 7c0-3 2-5 5-5"/>',protein:'<ellipse cx="12" cy="12" rx="8" ry="10"/><circle cx="12" cy="12" r="3"/>'}[n]||'';return`
