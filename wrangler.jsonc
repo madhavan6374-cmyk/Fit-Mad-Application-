@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/wrangler.json",
+  "name": "fit-mad-application",
+  "compatibility_date": "2026-10-07",
+
+  "assets": {
+    "directory": "."
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "fit-mad-db",
+      "database_id": "cc58b409-f5b8-40f5-8b2c-d882cbea7e89"
+    }
+  ]
+}
