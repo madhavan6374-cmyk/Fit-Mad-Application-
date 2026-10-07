@@ -1,0 +1,27 @@
+FIT MAD V53 CLOUD SYNC
+
+Files in this package:
+- wrangler.jsonc
+- worker.js
+- cloud-sync.js
+- service-worker.js
+- .assetsignore
+
+GitHub steps:
+1. Upload worker.js and cloud-sync.js to the repository root.
+2. Replace the existing service-worker.js with the one in this package.
+3. Replace the existing wrangler.jsonc with the one in this package.
+4. Add .assetsignore to the repository root.
+5. Commit the changes to main.
+
+Cloudflare will redeploy automatically.
+
+After deployment:
+- Open https://fit-mad-application.madhavan6374.workers.dev/api/health
+- It should return {"ok":true,"database":"fit-mad-db"}.
+- Then open the FIT MAD app.
+
+IMPORTANT:
+On the first cloud-sync launch, use the device that contains the most complete FIT MAD data first. That device seeds the empty cloud database. After that, open the app on other devices.
+
+The existing FIT MAD localStorage data is kept as a local fallback.

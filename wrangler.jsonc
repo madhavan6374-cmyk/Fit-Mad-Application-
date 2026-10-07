@@ -1,12 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/wrangler.json",
   "name": "fit-mad-application",
+  "main": "worker.js",
   "compatibility_date": "2026-10-07",
-
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": true
   },
-
   "d1_databases": [
     {
       "binding": "DB",
